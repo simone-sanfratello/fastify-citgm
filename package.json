@@ -1,6 +1,6 @@
 {
   "name": "fastify-citgm",
-  "version": "4.23.2-dev-6",
+  "version": "4.23.2-dev-7",
   "description": "Fast and low overhead web framework, for Node.js",
   "main": "fastify.js",
   "type": "commonjs",
@@ -25,10 +25,10 @@
     "test:validator:integrity": "npm run build:validation && git diff --quiet --ignore-all-space --ignore-blank-lines --ignore-cr-at-eol lib/error-serializer.js && git diff --quiet --ignore-all-space --ignore-blank-lines --ignore-cr-at-eol lib/configValidator.js",
     "test:typescript": "tsc test/types/import.ts && tsd",
     "test:watch": "npm run unit -- -w --no-coverage-report -R terse",
-    "unit": "c8 tap --bail",
+    "unit": "c8 tap",
     "unit:junit": "tap-mocha-reporter xunit < out.tap > test/junit-testresults.xml",
     "unit:report": "tap --cov --coverage-report=html --coverage-report=cobertura | tee out.tap",
-    "citgm": "tap -R min --bail"
+    "citgm": "tap --bail"
   },
   "repository": {
     "type": "git",
