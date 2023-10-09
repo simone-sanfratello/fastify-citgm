@@ -1,6 +1,0 @@
-TAP version 13
-not ok 1 - fastify-citgm vundefined Process Interrupted
-  ---
-  duration_ms: 165192
-  ...
-1..1
