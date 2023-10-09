@@ -6,17 +6,11 @@ const Fastify = require('..')
 const http = require('node:http')
 const { FST_ERR_FORCE_CLOSE_CONNECTIONS_IDLE_NOT_AVAILABLE } = require('../lib/errors')
 const sget = require('simple-get').concat
-const dns = require('node:dns').promises
+const helper = require('./helper')
 
 let localAddresses
 t.before(async () => {
-  try {
-    localAddresses = await dns.lookup('localhost', { all: true })
-    console.log('dns.lookup localhost:')
-    console.log(localAddresses)
-  } catch (err) {
-    console.error('error on dns lookup localhost', err)
-  }
+  localAddresses = await helper.dnsLookup('localhost', { all: true })
 })
 
 test('Should support a custom http server', async t => {
