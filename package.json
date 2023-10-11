@@ -1,6 +1,6 @@
 {
   "name": "fastify-citgm",
-  "version": "4.24.0-dev-16",
+  "version": "4.24.0-dev-17",
   "description": "Fast and low overhead web framework, for Node.js",
   "main": "fastify.js",
   "type": "commonjs",
